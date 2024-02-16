@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+void subArrays(vector<int> a)
+{
+    for (int i = 0; i < a.size(); i++)
+    {
+        for (int j = i + 1; j < a.size(); j++)
+        {
+            cout << "(";
+            for (int k = i; k <= j; k++)
+            {
+                cout << a[k] << ", ";
+            }
+            if(j < a.size() -1 )
+            cout << "), ";
+            else
+            cout<<")";
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    vector<int> a = {1, 2, 3, 4, 5, 6, 7};
+    subArrays(a);
+    return 0;
+}
