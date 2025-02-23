@@ -5,6 +5,14 @@ bool rotateString(string s, string goal) {
         return false;
         return (s+s).find(goal) != string::npos;
     }
+bool rotateString(string s, string goal) {
+        if(s.size() != goal.size())
+        return false;
+       if((s+s).find(goal) == -1)
+               return false;
+        else 
+               return true;
+    }
 
 class Solution {
 private:
